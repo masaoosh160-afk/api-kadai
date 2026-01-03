@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>おむつ替え・授乳室ナビ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- axios読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>👶 おむつ替え・授乳室ナビ</h1>
+        <div id="status-card">
+            <div id="weather-info">🌤 天気を読み込み中...</div>
+            <div id="ai-advice-area">
+                <span class="ai-badge">AI ADVICE</span>
+                <p id="ai-advice-text">目的地を入力してください</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="destination-input" placeholder="例: 新宿伊勢丹, 上野動物園">
+        <button id="dest-search-btn">目的地へ</button>
+    </div>
+
+    <main><div id="map"></div></main>
+
+    <nav class="action-bar">
+        <button id="current-location-btn" class="btn-secondary">📍 現在地</button>
+        <button id="search-around-btn" class="btn-primary">🍼 近くの施設を探す</button>
+    </nav>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
