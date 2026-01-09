@@ -8,8 +8,8 @@ let facilityLayer; // 施設アイコンを管理する専用レイヤー
 document.addEventListener('DOMContentLoaded', initApp);
 
 function initApp() {
-    // 地図の初期化（東京駅付近をデフォルトに）
-    map = L.map('map').setView([35.6812, 139.7671], 15);
+    // 地図の初期化（研創付近をデフォルトに）
+    map = L.map('map').setView([34.4750, 132.5648], 15);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap'
@@ -27,9 +27,9 @@ function initApp() {
     document.getElementById('current-location-btn').addEventListener('click', handleCurrentLocation);
 
     // 初回実行
-    updateUserMarker(35.6812, 139.7671, "東京駅 (サンプル)");
-    fetchFacilities(35.6812, 139.7671);
-    getWeatherAndAI(35.6812, 139.7671);
+    updateUserMarker(34.4750, 132.5648, "研創 (デフォルト位置)");
+    fetchFacilities(34.4750, 132.5648);
+    getWeatherAndAI(34.4750, 132.5648);
 }
 
 // 自分の位置ピンを更新
